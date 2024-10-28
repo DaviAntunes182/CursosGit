@@ -14,7 +14,7 @@ public class TestandoGit {
                 """, nome);
                 
         System.out.printf("""
-                Você tem %d anos!
+                Você tem %d anos
                 """, idade);
     }
 }
