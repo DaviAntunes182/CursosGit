@@ -1,6 +1,16 @@
 Comando:
+
+    --help:
+        mostra todas as tags do comando
+
     log:
+        Histórico de commits
         --oneline
             git log --oneline -> Histórico de commits de forma reduzida
         -p
-            hash completo, author, data, mensagem e diferença
+            hash completo, author, data, mensagem e mudanças entre commits
+        --pretty/format
+            ="%H %an" -> Hashcode + Autor Name
+        
+    show + hash_do_commit:
+        Detalhes do commit
