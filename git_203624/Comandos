@@ -14,3 +14,9 @@ Comando:
         
     show + hash_do_commit:
         Detalhes do commit
+
+    status:
+        Lista as mudanças, criações e deleções que ainda não foram commitadas
+    
+    diff:
+        Mostra a diferença entre dois estados, ultimo commit e o atual
