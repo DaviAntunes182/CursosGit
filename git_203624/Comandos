@@ -1,0 +1,6 @@
+Comando:
+    log:
+        --oneline
+            git log --oneline -> Histórico de commits de forma reduzida
+        -p
+            hash completo, author, data, mensagem e diferença
