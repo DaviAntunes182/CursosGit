@@ -7,7 +7,7 @@ public class TestandoGit {
         String nome = sc.next();
 
         System.out.printf("""
-                Olá %s!
+                Seja bem-vindo(a) %s!
                 """, nome);
     }
 }
