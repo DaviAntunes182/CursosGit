@@ -4,21 +4,13 @@ public class TestandoGit {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Aluno al1 = new Aluno("Davi", 123);
-        Aula au1 = new Aula("iniciando github com java", 10);
-        System.out.print("Digite seu nome aqui: ");
-        String nome = sc.next();
+        Aluno al2 = new Aluno("Lucas", 321);
+        Aluno al3 = new Aluno("Peter", 213);
 
         Curso c1 = new Curso("Curso de git com java", "Carinha do bigode feio");
 
-        System.out.print("Digite sua idade: ");
-        int idade = sc.nextInt();
-
-        System.out.printf("""
-                Seja bem-vindo(a) %s!
-                """, nome);
-                
-        System.out.printf("""
-                Você tem %d anos
-                """, idade);
+        c1.getAlunos().add(al1);
+        c1.getAlunos().add(al2);
+        c1.getAlunos().add(al3);
     }
 }
