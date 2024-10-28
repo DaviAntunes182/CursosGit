@@ -1,5 +1,21 @@
 Comando:
 
+    add .:
+        adicionando as operações para um possível commit
+    
+    git restore .:
+        desfaz modificações que ainda não foram adicionadas
+        segue a mesma logica do add
+
+    git restore --staged:
+        retira modificações da staging area, basicamente só desfaz o add
+
+    git restore --source <hash> <arquivo>:
+        retorna o arquivo ao estado de um commit(hash) feito anteriormente
+
+    git restore <arquivo>:
+        desfaz o restore acima
+
     --help:
         mostra todas as tags do comando
 
@@ -13,10 +29,68 @@ Comando:
             ="%H %an" -> Hashcode + Autor Name
         
     show + hash_do_commit:
-        Detalhes do commit
+        Detalhes do commit, o que foi alterado nele
 
     status:
-        Lista as mudanças, criações e deleções que ainda não foram commitadas
+        Lista as mudanças, criações e deleções que ainda não foram commitadas.
     
     diff:
-        Mostra a diferença entre dois estados, ultimo commit e o atual
+        Mostra a diferença entre dois estados, ultimo commit e o atual.
+        hash1:
+            Mostra as diferenças de um commit até o atual
+        hash1..hash2:
+            Mostra as diferenças entres commits específicos
+    pull:
+        git pull <enderço remoto> <branchprincipal>:
+            Traz as alterações do repositório Git para o local onde estamos trabalhando, fazendo assim um merge
+    push:
+        origin :nomebranch:
+            remove no github a branch passada
+    branch:
+        Lista as branches existentes
+        nomebranch:
+            cria uma nova branch com o nome passado
+
+    checkout:
+        -b nomebranch:
+            cria uma nova branch e muda para ela
+        nomebranch:
+            muda para a branch digitada
+    
+    switch:
+        -c nomebranch:
+            cria uma branch e muda para ela
+
+    rabase main:
+        muda para main e tenta aplicar os da branch secundaria a partir da main atual
+        aplica os commits de outras branchs na branch atual
+
+    stash:
+        Tem que ter dado o add. antes
+        Guarda o estado atual(o que foi feito) e desfaz o que foi feito, voltando ao estado inicial
+
+        push -m 'descrição do pop':
+            Salva o stash com um nome descritivo
+        pop:
+            recupera o trabalho do stash da ultima stash feita
+            apply 'index':
+                recupera o stash no index passado
+        list:
+            lista tudo que está no stash
+        clear:
+            limpa a stash
+    
+    tag <nome>:
+        cria uma tag no commit atual e fica salva neste commit
+    tag <nome> <hash>:
+        cria uma tag no commit conectado ao hash passado
+    tag:
+        lista as tags anteriores
+    tag -a <nome> -m <mensagem>:
+        cria uma tag customizada
+    
+    git cherry-pick <hash>:
+        Adiciona o commit pertencente a hash na branch atual
+
+    git blame <arquivo>:
+        Mostra os autores dos commits que modificaram alguma linha no arquivo e suas alterações

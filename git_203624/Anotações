@@ -1,0 +1,23 @@
+Não é uma boa todos usarem a branch main para fazerem alterações no código,
+gera muitos problemas
+
+HEAD -> Onde estamos trabalhando
+
+Unindo as ramificações -> 
+    No github irão aparecer pull requests das branchs que não são principais,
+    Mas não é obrigatório usar o github para isso podemos fazer pelo terminal
+
+Salvando para depois ->
+    Comando git stash
+
+Desfazendo alterações ->
+    Comando git restore
+
+Criando versões e gerando releases ->
+    Pontos de progresso a partir de commits
+    Comando tag
+    As releases se criam no github
+
+Como puxar um commit de outra branch para a atual
+
+    git cherry-pick <hash>
