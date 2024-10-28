@@ -9,5 +9,8 @@ public class TestandoGit {
 
         Curso c1 = new Curso("Curso de git com java", "Carinha do bigode feio");
 
+        c1.getAlunos().add(al1);
+        c1.getAlunos().add(al2);
+        c1.getAlunos().add(al3);
     }
 }
